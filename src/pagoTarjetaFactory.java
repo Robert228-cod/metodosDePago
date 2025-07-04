@@ -1,4 +1,8 @@
-package PACKAGE_NAME;
+public class pagoTarjetaFactory implements PagoFactory{
 
-public class pagoTarjetaFactory {
+    @Override
+    public Pago crearPago(String nombreCliente, String datoExtra){
+        return new pagoConTarjeta(datoExtra ,nombreCliente);
+    }
+
 }

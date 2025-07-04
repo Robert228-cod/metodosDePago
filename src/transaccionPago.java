@@ -1,10 +1,10 @@
 public class transaccionPago {
-    Pago metodoDePago;
-    double cantidad;
+    private final Pago metodoDePago; // inyeccion de depedencia (final)
+    private final double cantidad;
 
     public transaccionPago(Pago metodoDePago, double cantidad){
-        this.cantidad = cantidad;
         this.metodoDePago = metodoDePago;
+        this.cantidad = cantidad;
     }
 
     public double getMonto(){

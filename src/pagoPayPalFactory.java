@@ -1,4 +1,8 @@
-package PACKAGE_NAME;
+public class pagoPayPalFactory implements PagoFactory{
 
-public class pagoPayPalFactory {
+    @Override
+    public Pago crearPago(String nombreCliente, String datoExtra){
+        return new pagoPayPal(nombreCliente, datoExtra);
+    }
+
 }
